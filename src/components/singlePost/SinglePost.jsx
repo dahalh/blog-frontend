@@ -6,6 +6,7 @@ const SinglePost = () => {
   const location = useLocation();
   const path = location.pathname.split("/")[2];
   const [post, setPost] = useState({});
+  const PF = process.env.REACT_APP_IMAGE;
 
   useEffect(() => {
     const getPost = async () => {
@@ -19,7 +20,7 @@ const SinglePost = () => {
     <div className="singlePost">
       <div className="singlePostWrapper">
         {post.photo && (
-          <img src={post.photo} alt="" className="singlePostImg" />
+          <img src={PF + post.photo} alt="" className="singlePostImg" />
         )}
         <h1 className="singlePostTitle">
           {post.title}
