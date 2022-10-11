@@ -5,6 +5,7 @@ import { Context } from "../../context/Context";
 
 const Navbar = () => {
   const { user, dispatch } = useContext(Context);
+  const PF = process.env.REACT_APP_IMAGE;
 
   const handleLogout = () => {
     dispatch({ type: "LOGOUT" });
@@ -46,7 +47,9 @@ const Navbar = () => {
       </div>
       <div className="topRight">
         {user ? (
-          <img className="topImg" src={user.profilePic} alt="" />
+          <Link to="/settings">
+            <img className="topImg" src={PF + user.profilePic} alt="" />
+          </Link>
         ) : (
           <ul className="topList">
             <li className="topListItem">
