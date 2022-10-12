@@ -34,7 +34,8 @@ const Write = () => {
         process.env.REACT_APP_API + "/posts",
         newPost
       );
-      window.location.replace("/post/" + res.data._id);
+      // window.location.replace("/post/" + res.data._id);
+      window.location.replace("/");
     } catch (err) {
       console.log(err);
     }
