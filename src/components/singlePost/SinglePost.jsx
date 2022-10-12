@@ -30,7 +30,7 @@ const SinglePost = () => {
           data: { username: user.username },
         });
       }
-      // window.location.replace("/");
+      window.location.replace("/");
       setUpdateMode(false);
     } catch (err) {
       console.log(err);
