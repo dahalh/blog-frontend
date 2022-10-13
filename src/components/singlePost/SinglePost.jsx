@@ -46,7 +46,9 @@ const SinglePost = () => {
           desc,
         });
       }
-      window.location.reload();
+      // window.location.reload();
+      // window.location.replace("/");
+      setUpdateMode(false);
     } catch (err) {
       console.log(err);
     }
